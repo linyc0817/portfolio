@@ -6,7 +6,7 @@ import { baseURL } from "@/app/resources";
 import { person } from "@/app/resources/content";
 import { formatDate } from "@/app/utils/formatDate";
 import ScrollToHash from "@/components/ScrollToHash";
-
+import { getImagePath } from "@/app/utils/getImagePath";
 interface BlogParams {
   params: {
     slug: string;
@@ -35,7 +35,7 @@ export function generateMetadata({ params: { slug } }: BlogParams) {
     image,
     team,
   } = post.metadata;
-  let ogImage = image ? `https://${baseURL}${image}` : `https://${baseURL}/og?title=${title}`;
+  let ogImage = image ? `https://${baseURL}${getImagePath(image)}` : `https://${baseURL}/og?title=${title}`;
 
   return {
     title,
@@ -66,6 +66,11 @@ export default function Blog({ params }: BlogParams) {
 
   if (!post) {
     notFound();
+  }
+
+   // Process the image path in the metadata
+   if (post.metadata.image) {
+    post.metadata.image = getImagePath(post.metadata.image);
   }
 
   const avatars =
