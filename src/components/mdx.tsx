@@ -4,6 +4,7 @@ import React, { ReactNode } from "react";
 import { SmartImage, SmartLink, Text } from "@/once-ui/components";
 import { CodeBlock } from "@/once-ui/modules";
 import { HeadingLink } from "@/components";
+import { getImagePath } from "@/app/utils/getImagePath";
 
 import { TextProps } from "@/once-ui/interfaces";
 import { SmartImageProps } from "@/once-ui/components/SmartImage";
@@ -70,6 +71,9 @@ function createImage({ alt, src, ...props }: SmartImageProps & { src: string }) 
     return null;
   }
 
+  // Add the getImagePath here
+  const processedSrc = getImagePath(src);
+
   return (
     <SmartImage
       className="my-20"
@@ -77,7 +81,7 @@ function createImage({ alt, src, ...props }: SmartImageProps & { src: string }) 
       radius="m"
       aspectRatio="16 / 9"
       alt={alt}
-      src={src}
+      src={processedSrc}
       {...props}
     />
   );

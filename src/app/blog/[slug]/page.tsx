@@ -68,14 +68,9 @@ export default function Blog({ params }: BlogParams) {
     notFound();
   }
 
-   // Process the image path in the metadata
-   if (post.metadata.image) {
-    post.metadata.image = getImagePath(post.metadata.image);
-  }
-
   const avatars =
     post.metadata.team?.map((person) => ({
-      src: person.avatar,
+      src: getImagePath(person.avatar),
     })) || [];
 
   return (

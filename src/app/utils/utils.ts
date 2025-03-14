@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import { getImagePath } from "@/app/utils/getImagePath";
 
 type Team = {
   name: string;
@@ -42,10 +43,19 @@ function readMDXFile(filePath: string) {
     title: data.title || "",
     publishedAt: data.publishedAt,
     summary: data.summary || "",
-    image: data.image || "",
-    images: data.images || [],
+    // Add null check and proper path processing
+    image: data.image ? getImagePath(data.image) : "",
+    // Ensure images array exists and process each path
+    images: Array.isArray(data.images) 
+      ? data.images.map((img: string) => getImagePath(img))
+      : [],
     tag: data.tag || [],
-    team: data.team || [],
+    team: Array.isArray(data.team) 
+      ? data.team.map((member: Team) => ({
+          ...member,
+          avatar: member.avatar ? getImagePath(member.avatar) : ""
+        }))
+      : [],
     link: data.link || "",
   };
 
