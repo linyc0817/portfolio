@@ -10,6 +10,7 @@ const nextConfig = {
   pageExtensions: ["ts", "tsx", "md", "mdx"],
   output: 'export',
   distDir: 'dist',
+  basePath: process.env.NODE_ENV === 'production' ? '/portfolio' : '',
   images: {
     unoptimized: true,
   },
