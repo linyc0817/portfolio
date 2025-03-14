@@ -7,7 +7,7 @@ const person = {
     return `${this.firstName} ${this.lastName}`;
   },
   role: "Design Engineer",
-  avatar: "/images/avatar.jpg",
+  avatar: "/portfolio/images/avatar.jpg",
   location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
   languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
 };
@@ -108,7 +108,7 @@ const about = {
         images: [
           // optional: leave the array empty if you don't want to display images
           {
-            src: "/images/projects/project-01/cover-01.jpg",
+            src: "/portfolio/images/projects/project-01/cover-01.jpg",
             alt: "Once UI Project",
             width: 16,
             height: 9,
@@ -157,13 +157,13 @@ const about = {
         // optional: leave the array empty if you don't want to display images
         images: [
           {
-            src: "/images/projects/project-01/cover-02.jpg",
+            src: "/portfolio/images/projects/project-01/cover-02.jpg",
             alt: "Project image",
             width: 16,
             height: 9,
           },
           {
-            src: "/images/projects/project-01/cover-03.jpg",
+            src: "/portfolio/images/projects/project-01/cover-03.jpg",
             alt: "Project image",
             width: 16,
             height: 9,
@@ -176,7 +176,7 @@ const about = {
         // optional: leave the array empty if you don't want to display images
         images: [
           {
-            src: "/images/projects/project-01/cover-04.jpg",
+            src: "/portfolio/images/projects/project-01/cover-04.jpg",
             alt: "Project image",
             width: 16,
             height: 9,
@@ -210,72 +210,72 @@ const gallery = {
   // Images from https://pexels.com
   images: [
     {
-      src: "/images/gallery/img-01.jpg",
+      src: "/portfolio/images/gallery/img-01.jpg",
       alt: "image",
       orientation: "vertical",
     },
     {
-      src: "/images/gallery/img-02.jpg",
+      src: "/portfolio/images/gallery/img-02.jpg",
       alt: "image",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/img-03.jpg",
+      src: "/portfolio/images/gallery/img-03.jpg",
       alt: "image",
       orientation: "vertical",
     },
     {
-      src: "/images/gallery/img-04.jpg",
+      src: "/portfolio/images/gallery/img-04.jpg",
       alt: "image",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/img-05.jpg",
+      src: "/portfolio/images/gallery/img-05.jpg",
       alt: "image",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/img-06.jpg",
+      src: "/portfolio/images/gallery/img-06.jpg",
       alt: "image",
       orientation: "vertical",
     },
     {
-      src: "/images/gallery/img-07.jpg",
+      src: "/portfolio/images/gallery/img-07.jpg",
       alt: "image",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/img-08.jpg",
+      src: "/portfolio/images/gallery/img-08.jpg",
       alt: "image",
       orientation: "vertical",
     },
     {
-      src: "/images/gallery/img-09.jpg",
+      src: "/portfolio/images/gallery/img-09.jpg",
       alt: "image",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/img-10.jpg",
+      src: "/portfolio/images/gallery/img-10.jpg",
       alt: "image",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/img-11.jpg",
+      src: "/portfolio/images/gallery/img-11.jpg",
       alt: "image",
       orientation: "vertical",
     },
     {
-      src: "/images/gallery/img-12.jpg",
+      src: "/portfolio/images/gallery/img-12.jpg",
       alt: "image",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/img-13.jpg",
+      src: "/portfolio/images/gallery/img-13.jpg",
       alt: "image",
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/img-14.jpg",
+      src: "/portfolio/images/gallery/img-14.jpg",
       alt: "image",
       orientation: "horizontal",
     },
