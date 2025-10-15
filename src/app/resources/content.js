@@ -7,7 +7,7 @@ const person = {
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Design Engineer",
+  role: "Frontend Engineer",
   avatar: getImagePath('/images/avatar.jpg'),
   location: "Asia/Taipei", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
   languages: ["English", "Chinese"], // optional: Leave the array empty if you don't want to display languages
@@ -30,12 +30,12 @@ const social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system/nextjs-starter",
+    link: "https://github.com/linyc0817",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/linyc-tw/",
   },
   {
     name: "X",
@@ -45,7 +45,7 @@ const social = [
   {
     name: "Email",
     icon: "email",
-    link: "mailto:example@gmail.com",
+    link: "mailto:f0922571727@gmail.com",
   },
 ];
 
@@ -53,11 +53,11 @@ const home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Design engineer and builder</>,
+  headline: <>Frontend engineer with human-centered mindset</>,
   subline: (
     <>
-      I'm Selene, a design engineer at <InlineCode>FLY</InlineCode>, where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      I'm Yen-Chun, a CS Master student graduated from <InlineCode>NYCU</InlineCode>. Also a frontend engineer who 
+      <br /> bridges design and technology to craft intuitive, performant, and user-focused web experiences.
     </>
   ),
 };
@@ -82,9 +82,9 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Yen-Chun is a frontend engineer with a background in Human-Computer Interaction. With a passion for
+        turning user needs into elegant and intuitive web designs. His experiences span web development, 
+        user interviews, and the convergence of design and technology.
       </>
     ),
   },
