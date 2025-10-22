@@ -74,7 +74,7 @@ const about = {
     display: true,
   },
   calendar: {
-    display: true,
+    display: false,
     link: "https://cal.com",
   },
   intro: {
@@ -93,44 +93,48 @@ const about = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "TSMC",
+        timeframe: "July 2022 - Sept 2022",
+        role: "IT Intern",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Refactored internal React website improving maintainability and reducing UI defects during updates.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Leveraged Mock Service Worker (MSW) to simulate API endpoints for frontend testing. 
+          </>,
+          <>
+            Applied RxJS Observables to manage asynchronous data streams and event handling. 
           </>,
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
+        ],
+      },
+      {
+        company: "NYCU DAC",
+        timeframe: "2019 – 2024 ",
+        role: "Frontend Engineer",
+        achievements: [
+          <>
+            Built and maintained the Department of Applied Chemistry website (dac.nycu.edu.tw), 
+            serving 3~4K monthly visitors and ~20GB monthly traffic (SimilarWeb & AWS CloudFront analytics).
+          </>,
+          <>
+            Created custom WordPress Gutenberg blocks, enabling non-technical staff to manage content efficiently.
+          </>,
+          <>
+            Delivered responsive, accessible UI with Vue and Tailwind CSS, ensuring seamless display across devices.
+          </>,
+        ],
+        images: [
           {
-            src: getImagePath("/images/projects/project-01/cover-01.jpg"),
+            src: getImagePath("/images/projects/project-02/cover-01.png"),
             alt: "Once UI Project",
             width: 16,
             height: 9,
           },
         ],
-      },
-      {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
-        achievements: [
-          <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
-          </>,
-        ],
-        images: [],
       },
     ],
   },
@@ -153,18 +157,24 @@ const about = {
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
-        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
+        title: "Vue.js / React.js",
+        description: <>Building RWD websites with Vue.js / React.js and Tailwind CSS.</>,
         // optional: leave the array empty if you don't want to display images
         images: [
           {
-            src: getImagePath("/images/projects/project-01/cover-02.jpg"),
+            src: getImagePath("/images/projects/project-02/cover-01.png"),
             alt: "Project image",
             width: 16,
             height: 9,
           },
           {
-            src: getImagePath("/images/projects/project-01/cover-03.jpg"),
+            src: getImagePath("/images/projects/project-03/cover-01.png"),
+            alt: "Project image",
+            width: 16,
+            height: 9,
+          },
+          {
+            src: getImagePath("/images/projects/project-03/cover-02.png"),
             alt: "Project image",
             width: 16,
             height: 9,
@@ -172,12 +182,12 @@ const about = {
         ],
       },
       {
-        title: "Next.js",
-        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
+        title: "Figma",
+        description: <>Able to prototype in Figma to speed up the development process.</>,
         // optional: leave the array empty if you don't want to display images
         images: [
           {
-            src: getImagePath("/images/projects/project-01/cover-04.jpg"),
+            src: getImagePath("/images/projects/project-03/figma.png"),
             alt: "Project image",
             width: 16,
             height: 9,
