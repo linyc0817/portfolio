@@ -179,6 +179,12 @@ const about = {
             width: 16,
             height: 9,
           },
+          {
+            src: getImagePath("/images/projects/project-03/cover-03.jpeg"),
+            alt: "Project image",
+            width: 16,
+            height: 9,
+          },
         ],
       },
       {
