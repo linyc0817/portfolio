@@ -8,7 +8,7 @@ const withMDX = mdx({
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ["ts", "tsx", "md", "mdx"],
-  output: 'export',
+  output: 'export', // Required for GitHub Pages deployment
   distDir: 'dist',
   basePath: process.env.NODE_ENV === 'production' ? '/portfolio' : '',
   images: {
