@@ -1,0 +1,62 @@
+---
+title: "Building Smart Campus, an LLM Experimental Platform"
+publishedAt: "2025-10-22"
+summary: "Development an experimental platform using React.js for front-end and Figma for design collaboration."
+images:
+  - "/images/projects/project-03/cover-01.png"
+  - "/images/projects/project-03/cover-02.jpeg"
+  - "/images/projects/project-03/cover-03.jpeg"
+  - "/images/projects/project-03/figma.png"
+team:
+  - name: "Barney Lin"
+    role: "Developer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/linyc-tw/"
+  - name: "Pei-Hua Tsai"
+    role: "Designer"
+    avatar: "/images/projects/project-03/avatar-01.png"
+    linkedIn: ""
+  - name: "Yu-Hao Weng"
+    role: "Developer"
+    avatar: "/images/projects/project-03/avatar-02.png"
+    linkedIn: ""
+---
+
+## Overview
+
+Development an experimental platform using React.js for front-end and Figma for design collaboration.
+
+## Key Features
+
+- **LLM-powered Agent (Tell2Find)**: Developed an intelligent retrieval agent using GPT-3.5-turbo to help users locate relevant existing reports and reduce redundant submissions on a VGI (Volunteered Geographic Information) platform.
+- **Modular Frontend Architecture**: Built the experiment interface with **React + TypeScript**, using **Redux Toolkit (RTK Query)** for predictable, scalable state management and efficient data flow across tasks.
+- **Real-time Synchronization**: Integrated **Firebase (Firestore, Auth, Hosting, Storage)** to ensure cross-device consistency and instant data updates among participants during experiments.
+- **Automated Deployment**: Set up a **GitHub Actions CD pipeline** for continuous delivery, enabling fast iterations and reliable deployment throughout experimental cycles.
+- **User-Centric UI Design**: Created reusable, accessible UI components designed for mobile and desktop use, allowing smooth task completion and reducing participant effort during crowdsourcing tasks.
+
+## Technologies Used
+
+- **Frontend**: React.js, TypeScript, Redux Toolkit (RTK Query), Firebase, Tailwind CSS
+- **Backend & Infrastructure**: GitHub Actions (CD pipeline), Firestore database
+- **AI Integration**: OpenAI GPT-3.5-turbo (LLM-based agent for report suggestion and retrieval)
+- **Design Tools**: Figma for wireframing and user interface iteration
+
+## Challenges and Learnings
+
+- **Balancing LLM Precision and User Waiting Time**  
+  During development, we compared GPT-3.5-turbo and GPT-4 for generating report-matching recommendations. Although GPT-4 produced slightly more accurate results, 
+  its reasoning process substantially increased response latency—often long enough for users to assume the tool had failed. To maintain responsiveness and ensure user acceptance, 
+  we prioritized GPT-3.5-turbo, which offered comparable accuracy with significantly faster turnaround time. This trade-off highlighted the importance of balancing model precision 
+  with perceived system performance in interactive LLM applications.
+- **Preventing Race Conditions in RTK Query When Updating LLM Results**  
+  We observed intermittent inconsistencies where newly recommended POIs failed to refresh after updates on the LLM result page.The root cause was **RTK Query’s cache reuse**: identical query keys allowed outdated data to overwrite newer GPT responses.
+  To ensure deterministic updates, I restructured the data flow so that each GPT output generated a unique list of recommendation IDs, which served as a dynamic query key to trigger guaranteed refetching.
+  Additionally, both the Redux store and local component state were reset when closing the modal to prevent stale cache display. Together, these mechanisms eliminated race-condition–like behavior and ensured the interface consistently reflected the latest LLM results.
+
+## Outcome
+
+A user study with 48 participants compared the LLM-powered agent, a traditional filter tool, and a hybrid version.
+
+- Participants using Tell2Find examined existing reports more frequently and updated prior entries more often, resulting in **over 10% fewer redundant submissions**.
+- Qualitative feedback highlighted **reduced effort in report matching**, **greater convenience in mobile contexts**, and enhanced engagement with prior data due to relevant LLM suggestions.
+- Insights from the experiment informed new design directions for trustworthy and transparent LLM-driven interfaces in mobile crowdsourcing systems.
