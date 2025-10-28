@@ -1,6 +1,7 @@
 ---
 title: "MUILab Graduate-Related FAQ Chatbot"
 publishedAt: "2025-10-21"
+summary: "Developed a Retrieval-Augmented Generation (RAG) chatbot to answer graduate-related FAQ using both local document retrieval and LLM-based reasoning."
 images:
   - "/images/projects/project-04/rag-01.jpeg"
   - "/images/projects/project-04/rag-02.jpeg"
@@ -31,12 +32,7 @@ and vector storage using ChromaDB for persistent retrieval.
 
 - The chatbot compares query–document similarity and switches to RAG mode only if relevant chunks (distance < 0.5) are found.
 
-<img
-  src="/images/projects/project-04/system-flow.png"
-  alt="RAG chatbot flow diagram"
-  className="mx-auto max-h-[900px] w-auto object-contain"
-/>
-
+![Flow diagram showing how the chatbot switches between RAG and GPT modes](/images/projects/project-04/system-flow.png)
 
 
 
